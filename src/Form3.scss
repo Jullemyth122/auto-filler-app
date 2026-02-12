@@ -1,0 +1,108 @@
+.form3-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .step-indicator {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 1rem;
+
+        .step {
+            font-weight: bold;
+            color: #ccc;
+
+            &.active {
+                color: #9C27B0;
+            }
+        }
+    }
+
+    .form-section {
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+
+        input,
+        select,
+        textarea {
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+    }
+
+    .navigation-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid #eee;
+
+        button {
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            border: none;
+            transition: background-color 0.2s;
+
+            &.prev-btn {
+                background-color: #e0e0e0;
+                color: #333;
+
+                &:hover {
+                    background-color: #d5d5d5;
+                }
+
+                &:disabled {
+                    opacity: 0.5;
+                    cursor: not-allowed;
+                }
+            }
+
+            &.next-btn {
+                background-color: #9C27B0;
+                color: white;
+
+                &:hover {
+                    background-color: #7B1FA2;
+                }
+            }
+
+            &.submit-btn {
+                background-color: #4CAF50;
+                color: white;
+
+                &:hover {
+                    background-color: #388E3C;
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
